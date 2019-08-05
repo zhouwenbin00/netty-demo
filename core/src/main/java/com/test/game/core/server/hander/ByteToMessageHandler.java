@@ -25,16 +25,19 @@ public class ByteToMessageHandler extends ByteToMessageDecoder {
         Message message;
         while ((message = Message.decode(in, this.factory)) != null) {
             out.add(message);
-//            if (this.logger.isTraceEnabled()
-//                    && !message.getClass()
-//                            .getName()
-//                            .equals("com.popcorn.legend.message.modules.misc.ClientWrapperResponse")
-//                    && !message.getClass()
-//                            .getName()
-//                            .equals(
-//                                    "com.popcorn.legend.message.modules.misc.ClientWrapperRequest")) {
-//                this.logger.trace("RCV<-{}:{}", NetUtils.host(ctx), message.getClass().getName());
-//            }
+            //            if (this.logger.isTraceEnabled()
+            //                    && !message.getClass()
+            //                            .getName()
+            //
+            // .equals("com.popcorn.legend.message.modules.misc.ClientWrapperResponse")
+            //                    && !message.getClass()
+            //                            .getName()
+            //                            .equals(
+            //
+            // "com.popcorn.legend.message.modules.misc.ClientWrapperRequest")) {
+            //                this.logger.trace("RCV<-{}:{}", NetUtils.host(ctx),
+            // message.getClass().getName());
+            //            }
         }
     }
 }

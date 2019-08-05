@@ -1,17 +1,18 @@
 package com.test.game.core.utils;
 
+import com.test.game.core.net.message.MessageFactory;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /** @Auther: zhouwenbin @Date: 2019/8/5 10:45 */
-@Slf4j
 public abstract class NetUtils {
-
+    private static final Logger log = LoggerFactory.getLogger(NetUtils.class);
     public static final AttributeKey<AtomicInteger> WRITE_FAIL_TIMES =
             AttributeKey.newInstance("WRITE_FAIL_TIMES");
 

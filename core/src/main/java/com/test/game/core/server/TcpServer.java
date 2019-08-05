@@ -1,6 +1,7 @@
 package com.test.game.core.server;
 
 import com.test.game.core.base.Factory;
+import com.test.game.core.net.message.MessageFactory;
 import com.test.game.core.server.hander.ByteToMessageHandler;
 import com.test.game.core.server.hander.ExceptionHandler;
 import com.test.game.core.server.hander.MessageHandler;
@@ -16,16 +17,16 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.bytes.ByteArrayEncoder;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.util.concurrent.EventExecutor;
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.concurrent.ThreadFactory;
 
 /** @Auther: zhouwenbin @Date: 2019/8/3 15:12 */
-@Slf4j
-@Data
 public class TcpServer {
+
+    private static final Logger log = LoggerFactory.getLogger(TcpServer.class);
     private final String name;
     private final int port;
     private final EventLoopGroup bossGroup;
@@ -154,4 +155,25 @@ public class TcpServer {
         }
         log.info("server close success");
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public EventLoopGroup getBossGroup() {
+        return bossGroup;
+    }
+
+    public EventLoopGroup getWorkerGroup() {
+        return workerGroup;
+    }
+
+    public ServerBootstrap getBootstrap() {
+        return bootstrap;
+    }
+
 }

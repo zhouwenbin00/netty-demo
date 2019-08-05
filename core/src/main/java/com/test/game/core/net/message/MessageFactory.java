@@ -1,11 +1,12 @@
 package com.test.game.core.net.message;
 
-import com.test.game.core.net.message.Message;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** @Auther: zhouwenbin @Date: 2019/8/5 13:49 */
-@Slf4j
 public abstract class MessageFactory {
+
+    private static final Logger log = LoggerFactory.getLogger(MessageFactory.class);
 
     public MessageFactory() {}
 
