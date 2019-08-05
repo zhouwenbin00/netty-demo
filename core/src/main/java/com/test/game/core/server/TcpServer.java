@@ -1,16 +1,15 @@
 package com.test.game.core.server;
 
 import com.test.game.core.base.Factory;
-import com.test.game.core.net.message.MessageFactory;
+import com.test.game.core.concurrent.ThreadFactory;
 import com.test.game.core.server.hander.ByteToMessageHandler;
 import com.test.game.core.server.hander.ExceptionHandler;
 import com.test.game.core.server.hander.MessageHandler;
 import com.test.game.core.server.hander.MessageToByteHandler;
 import com.test.game.core.utils.Num;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.EventLoopGroup;
+import io.netty.buffer.PooledByteBufAllocator;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -21,7 +20,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
-import java.util.concurrent.ThreadFactory;
 
 /** @Auther: zhouwenbin @Date: 2019/8/3 15:12 */
 public class TcpServer {
@@ -34,6 +32,38 @@ public class TcpServer {
     private final ServerBootstrap bootstrap;
     private final int LOW_WATER_MARK = 32 * Num.KB;
     private final int HIGH_WATER_MARK = 64 * Num.KB;
+
+    public TcpServer(String name, int port, ChannelInitializer<SocketChannel> initializer) {
+        this.bootstrap = new ServerBootstrap();
+        this.name = name;
+        this.port = port;
+        this.bossGroup =
+                new NioEventLoopGroup(
+                        Num.ONE, new ThreadFactory("Boss-Thread", Thread.MAX_PRIORITY));
+        this.workerGroup =
+                new NioEventLoopGroup(
+                        Num.ZERO, new ThreadFactory("Worker-Thread", Thread.MAX_PRIORITY));
+        bootstrap
+                .group(bossGroup, workerGroup)
+                .channel(NioServerSocketChannel.class)
+                .childHandler(initializer)
+                .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
+                .option(ChannelOption.TCP_NODELAY, true)
+                .option(ChannelOption.SO_RCVBUF, 32 * Num.KB)
+                .option(ChannelOption.SO_SNDBUF, 64 * Num.KB)
+                .option(ChannelOption.SO_REUSEADDR, true)
+                .option(
+                        ChannelOption.WRITE_BUFFER_WATER_MARK,
+                        new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK))
+                .childOption(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
+                .childOption(ChannelOption.TCP_NODELAY, true)
+                .childOption(ChannelOption.SO_RCVBUF, 32 * Num.KB)
+                .childOption(ChannelOption.SO_SNDBUF, 64 * Num.KB)
+                .childOption(ChannelOption.SO_REUSEADDR, true)
+                .childOption(
+                        ChannelOption.WRITE_BUFFER_WATER_MARK,
+                        new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK));
+    }
 
     public TcpServer(
             String name,
@@ -53,23 +83,12 @@ public class TcpServer {
             int workerNum,
             Factory<ByteToMessageHandler> decoderFactory,
             Factory<MessageToByteHandler> encoderFactory) {
-        this(
-                name,
-                port,
-                (ThreadFactory) null,
-                (ThreadFactory) null,
-                workerNum,
-                timeOutSeconds,
-                messageHandler,
-                decoderFactory,
-                encoderFactory);
+        this(name, port, workerNum, timeOutSeconds, messageHandler, decoderFactory, encoderFactory);
     }
 
     public TcpServer(
             String name,
             int port,
-            ThreadFactory bossThreadFactory,
-            ThreadFactory workerThreadFactory,
             int workerNum,
             final int timeoutSeconds,
             final MessageHandler messageHandler,
@@ -92,33 +111,44 @@ public class TcpServer {
                         ch.pipeline().addLast(new ExceptionHandler());
                     }
                 },
-                bossThreadFactory,
-                workerThreadFactory,
                 workerNum);
     }
 
     public TcpServer(
-            String name,
-            int port,
-            ChannelInitializer<SocketChannel> initializer,
-            ThreadFactory bossThreadFactory,
-            ThreadFactory workerThreadFactory,
-            int workerNum) {
+            String name, int port, ChannelInitializer<SocketChannel> initializer, int workerNum) {
         log.info("init TcpServer start...");
         this.name = name;
         this.port = port;
-        this.bossGroup = new NioEventLoopGroup(Num.ONE, bossThreadFactory);
+        this.bossGroup =
+                new NioEventLoopGroup(
+                        Num.ONE, new ThreadFactory("Boss-Thread", Thread.MAX_PRIORITY));
         this.workerGroup =
                 new NioEventLoopGroup(
                         workerNum > Num.ZERO
                                 ? workerNum
                                 : Runtime.getRuntime().availableProcessors() * 2,
-                        workerThreadFactory);
+                        new ThreadFactory("Worker-Thread", Thread.MAX_PRIORITY));
         this.bootstrap = new ServerBootstrap();
         this.bootstrap
                 .group(this.bossGroup, this.workerGroup)
                 .channel(NioServerSocketChannel.class)
-                .childHandler(initializer);
+                .childHandler(initializer)
+                .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT) // 重用缓冲区
+                .option(ChannelOption.TCP_NODELAY, Boolean.TRUE) // 关闭Nagle算法
+                .option(ChannelOption.SO_RCVBUF, LOW_WATER_MARK) // 定义接收或者传输的系统缓冲区buf的大小
+                .option(ChannelOption.SO_SNDBUF, HIGH_WATER_MARK) // 定义接收或者传输的系统缓冲区buf的大小
+                .option(ChannelOption.SO_REUSEADDR, Boolean.TRUE) // 允许启动一个监听服务器并捆绑其众所周知端口
+                .option(
+                        ChannelOption.WRITE_BUFFER_WATER_MARK,
+                        new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK)) // 读写水位控制
+                .childOption(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
+                .childOption(ChannelOption.TCP_NODELAY, Boolean.TRUE)
+                .childOption(ChannelOption.SO_RCVBUF, LOW_WATER_MARK)
+                .childOption(ChannelOption.SO_SNDBUF, HIGH_WATER_MARK)
+                .childOption(ChannelOption.SO_REUSEADDR, Boolean.TRUE)
+                .childOption(
+                        ChannelOption.WRITE_BUFFER_WATER_MARK,
+                        new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK));
         log.info("init TcpServer end...");
     }
 
@@ -175,5 +205,4 @@ public class TcpServer {
     public ServerBootstrap getBootstrap() {
         return bootstrap;
     }
-
 }

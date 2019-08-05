@@ -32,7 +32,7 @@ public abstract class NetUtils {
      * @param channel
      * @return
      */
-    private static String host(Channel channel) {
+    public static String host(Channel channel) {
         try {
             InetSocketAddress remoteAddress = (InetSocketAddress) channel.remoteAddress();
             return remoteAddress.getHostString();

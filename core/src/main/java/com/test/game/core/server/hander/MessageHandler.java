@@ -10,6 +10,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.AttributeKey;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.util.HashSet;
@@ -17,9 +19,9 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /** @Auther: zhouwenbin @Date: 2019/8/3 16:13 */
-@Slf4j
 public abstract class MessageHandler extends ChannelInboundHandlerAdapter {
 
+    private static final Logger log = LoggerFactory.getLogger(MessageHandler.class);
     // channel计数器
     private final AtomicInteger channelCount = new AtomicInteger(Num.ZERO);
     private final String name;
