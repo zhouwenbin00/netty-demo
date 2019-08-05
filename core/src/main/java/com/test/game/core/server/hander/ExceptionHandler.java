@@ -1,4 +1,4 @@
-package com.test.game.core.server;
+package com.test.game.core.server.hander;
 
 import com.test.game.core.utils.NetUtils;
 import io.netty.channel.ChannelDuplexHandler;

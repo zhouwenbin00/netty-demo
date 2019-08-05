@@ -1,4 +1,4 @@
-package com.test.game.core.net;
+package com.test.game.core.net.message;
 
 import com.test.game.core.utils.ByteBufUtils;
 import com.test.game.core.utils.Num;

@@ -1,4 +1,4 @@
-package com.test.game.core.server;
+package com.test.game.core.base;
 
 /**
  * @Auther: zhouwenbin

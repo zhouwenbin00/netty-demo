@@ -1,7 +1,7 @@
-package com.test.game.core.server;
+package com.test.game.core.server.hander;
 
-import com.test.game.core.net.Message;
-import com.test.game.core.net.MessageFactory;
+import com.test.game.core.net.message.Message;
+import com.test.game.core.net.message.MessageFactory;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;

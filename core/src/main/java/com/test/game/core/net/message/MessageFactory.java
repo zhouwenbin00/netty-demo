@@ -1,5 +1,6 @@
-package com.test.game.core.net;
+package com.test.game.core.net.message;
 
+import com.test.game.core.net.message.Message;
 import lombok.extern.slf4j.Slf4j;
 
 /** @Auther: zhouwenbin @Date: 2019/8/5 13:49 */
