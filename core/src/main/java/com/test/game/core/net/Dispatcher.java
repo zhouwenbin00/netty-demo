@@ -67,11 +67,11 @@ public class Dispatcher extends MessageHandler {
             log.info("[4] user 与账号：{}不匹配 ，可能为顶号", account.getName());
             return;
         }
-        Role role = account.getRole();
-        if (role == null) {
-            log.info("[6]没有创建角色", account.getName());
-            return;
-        }
+        //        Role role = account.getRole();
+        //        if (role == null) {
+        //            log.info("[6]没有创建角色", account.getName());
+        //        }
+        account.setOnline( Boolean.FALSE );
         account.close(netUser);
     }
 
