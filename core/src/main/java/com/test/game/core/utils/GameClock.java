@@ -9,7 +9,19 @@ public abstract class GameClock {
 
     private GameClock() {}
 
+    /**
+     * 当前时间戳（毫秒）
+     * @return
+     */
     public static long millis()  {
         return clock.millis();
+    }
+
+    /**
+     * 当前时间戳（秒）
+     * @return
+     */
+    public static int seconds() {
+        return (int) (millis()/ Num.THOUSAND);
     }
 }
