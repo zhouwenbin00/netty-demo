@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
         <module name="data" />
+        <module name="generated" />
         <module name="logic" />
+        <module name="template" />
       </profile>
     </annotationProcessing>
   </component>
