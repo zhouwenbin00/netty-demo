@@ -66,7 +66,7 @@ public abstract class ExcelUtils {
                 Iterator<Sheet> it = workbook.sheetIterator();
                 while (it.hasNext()) {
                     Sheet sheet = it.next();
-                    if (StringUtils.isNullOrEmpty(sheet.getSheetName())
+                    if (StringUtils.isNotBlank(sheet.getSheetName())
                             && sheet.getSheetName().startsWith("q_")
                             && StringUtils.allEnglish(sheet.getSheetName())) {
                         parseSheet(file.getName(), sheet, classes, datas);
@@ -118,6 +118,7 @@ public abstract class ExcelUtils {
                     fieldDesc = "";
                 }
                 fieldDesc = fieldDesc.replaceAll("\r", "\t");
+                fieldDesc = fieldDesc.replaceAll("\n", "\t");
                 Field field =
                         new Field(
                                 fieldName,
@@ -138,7 +139,7 @@ public abstract class ExcelUtils {
         if (datas != null) {
             List<List<FieldWithValue>> list = new LinkedList<>();
             for (int row = 5; row <= sheet.getLastRowNum(); row++) {
-                if (StringUtils.isNullOrEmpty(getStringValue(sheet, row, 0))) {
+                if (StringUtils.isNotBlank(getStringValue(sheet, row, 0))) {
                     List<FieldWithValue> array = new ArrayList<>();
                     for (Field field : fields) {
                         String value = getStringValue(sheet, row, field.col);

@@ -1,7 +1,7 @@
 <#macro read field><#if field.basic>builder.${field.name}<#else>${class.name?cap_first}Group.create_${field.name}(builder, builder.${field.name})</#if></#macro>
-<#macro type field>${field.stype}</#macro>
+<#macro type field>${field.javaType}</#macro>
 <#macro read2 field><#if field.basic>ByteBufUtil.read${field.stype?cap_first}(buf)<#else>ByteBufUtil.readString(buf)</#if></#macro>
-<#macro type2 field><#if field.basic>${field.stype}<#else>String</#if></#macro>
+<#macro type2 field><#if field.basic>${field.javaType}<#else>String</#if></#macro>
 package ${package};
 
 import shell.nio.ByteBufUtil;

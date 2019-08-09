@@ -20,7 +20,7 @@ public class DataWithClass {
 
     public void writeServer(ByteBuf buf) {
         if (GenerateUtils.log.isDebugEnabled()) {
-            GenerateUtils.log.debug("write client:{}", this.clazz.className);
+            GenerateUtils.log.debug("write client:{}", this.clazz.name);
         }
         if (this.clazz.belong.isServer()) {
             ByteBufUtils.writeInt(buf, this.dataList.size());
@@ -40,7 +40,7 @@ public class DataWithClass {
 
     public void writeClient(ByteBuf buf) {
         if (GenerateUtils.log.isDebugEnabled()) {
-            GenerateUtils.log.debug("write client:{}", this.clazz.className);
+            GenerateUtils.log.debug("write client:{}", this.clazz.name);
         }
         if (this.clazz.belong.isClient()) {
             ByteBufUtils.writeInt(buf, this.dataList.size());

@@ -56,14 +56,14 @@ public abstract class GenerateUtils {
                         + File.separator
                         + FileUtils.package2path(pkg)
                         + File.separator
-                        + StringUtils.capFirst(clazz.className)
+                        + StringUtils.capFirst(clazz.name)
                         + ".java");
                 FreeMarkerUtils.gen(
                         autoDir.getAbsolutePath()
                                 + File.separator
                                 + FileUtils.package2path(pkg)
                                 + File.separator
-                                + StringUtils.capFirst(clazz.className)
+                                + StringUtils.capFirst(clazz.name)
                                 + ".java",
                         autoBeanTemplate,
                         new MapBuilder<String, Object>(new HashMap<>())
@@ -76,7 +76,7 @@ public abstract class GenerateUtils {
                                 + File.separator
                                 + FileUtils.package2path(pkg)
                                 + File.separator
-                                + StringUtils.capFirst(clazz.className)
+                                + StringUtils.capFirst(clazz.name)
                                 + "Group.java",
                         customGroupTemplate,
                         new MapBuilder<String, Object>(new HashMap<>())

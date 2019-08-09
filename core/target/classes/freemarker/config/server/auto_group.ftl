@@ -17,7 +17,7 @@ public class ConfigGroup {
     public final byte[] DATA_VERSION;
 <#list classes as class>
     <#if class.belong.server>
-    public final ${class.className?cap_first}Group ${class.className?uncap_first}Group; // ${class.classDesc}
+    public final ${class.name?cap_first}Group ${class.name?uncap_first}Group; // ${class.desc}
     </#if>
 </#list>
 
@@ -33,9 +33,10 @@ public class ConfigGroup {
 <#list classes as class>
     <#if class.belong.server>
             try {
-                this.${class.className?uncap_first}Group = new ${class.className?cap_first}Group(buf);
-            } catch(Throwable e) {
-                throw new shell.game.misc.ConfigFileException(e.getMessage(), "${class.classDesc}", e);
+                this.${class.name?uncap_first}Group = new ${class.name?cap_first}Group(buf);
+            } catch (Throwable e) {
+                throw new com.test.game.core.exception.ConfigFileException(
+                     e.getMessage(), "${class.desc}", e);
             }
     </#if>
 </#list>
@@ -48,9 +49,9 @@ public class ConfigGroup {
 <#list classes as class>
     <#if class.belong.server>
         try {
-            this.${class.className?uncap_first}Group.check(this);
+            this.${class.name?uncap_first}Group.check(this);
         } catch(Throwable e) {
-      throw new shell.game.misc.ConfigFileException(e.getMessage(), "${class.desc}", e);
+      throw new com.test.game.core.exception.ConfigFileException(e.getMessage(), "${class.desc}", e);
         }
     </#if>
 </#list>
