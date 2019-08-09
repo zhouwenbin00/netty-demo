@@ -1,13 +1,13 @@
 package com.test.game;
 
 import com.google.common.io.Files;
-import com.test.game.core.utils.ConfigUtils;
+import com.test.game.core.utils.GenerateUtils;
 
 import java.io.File;
 import java.io.IOException;
 
 /** 生成config的bin文件 @Auther: zhouwenbin @Date: 2019/8/8 19:52 */
-public class MfgGen {
+public class CfgGen {
 
     private static final String execl_dir = "cfg";
     private static final File server_file = new File("cfg/server.bin");
@@ -15,7 +15,7 @@ public class MfgGen {
     private static final File share_cfg_dir = new File("../share/" + GitIgnore.NAME + "/config");
 
     public static void main(String[] args) throws IOException {
-        ConfigUtils.export(execl_dir, server_file, client_file);
+        GenerateUtils.export(execl_dir, server_file, client_file);
         if (share_cfg_dir.exists()) {
             for (File file : share_cfg_dir.listFiles()) {
                 file.delete();

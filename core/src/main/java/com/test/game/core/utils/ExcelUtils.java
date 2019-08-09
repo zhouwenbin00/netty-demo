@@ -39,7 +39,6 @@ public abstract class ExcelUtils {
 
     public static void parse(
             String excelDir,
-            Map<String, ConfigUtils.CustomClass> name2customClass,
             List<Class> classes,
             List<DataWithClass> datas) {
         File dir = new File(excelDir);
@@ -70,7 +69,7 @@ public abstract class ExcelUtils {
                     if (StringUtils.isNullOrEmpty(sheet.getSheetName())
                             && sheet.getSheetName().startsWith("q_")
                             && StringUtils.allEnglish(sheet.getSheetName())) {
-                        parseSheet(file.getName(), sheet, name2customClass, classes, datas);
+                        parseSheet(file.getName(), sheet, classes, datas);
                     }
                 }
 
@@ -91,7 +90,6 @@ public abstract class ExcelUtils {
     public static void parseSheet(
             String fileName,
             Sheet sheet,
-            Map<String, ConfigUtils.CustomClass> name2customClass,
             List<Class> classes,
             List<DataWithClass> datas) {
         boolean client = false;

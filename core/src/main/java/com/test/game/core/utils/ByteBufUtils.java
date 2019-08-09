@@ -98,7 +98,7 @@ public abstract class ByteBufUtils {
         }
     }
 
-    private static void writeBytes(ByteBuf buf, byte[] bytes, int srcIndex, int length) {
+    public static void writeBytes(ByteBuf buf, byte[] bytes, int srcIndex, int length) {
         buf.writeBytes(bytes, srcIndex, length);
     }
 
@@ -133,5 +133,9 @@ public abstract class ByteBufUtils {
         } else {
             throw new IllegalArgumentException("内部错误,检查buf吧");
         }
+    }
+
+    public static String readString(ByteBuf buf) {
+        return null;
     }
 }

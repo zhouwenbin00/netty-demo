@@ -1,7 +1,7 @@
 package com.test.game.core.gen;
 
 import com.test.game.core.utils.ByteBufUtils;
-import com.test.game.core.utils.ConfigUtils;
+import com.test.game.core.utils.GenerateUtils;
 import io.netty.buffer.ByteBuf;
 
 import java.util.List;
@@ -19,8 +19,8 @@ public class DataWithClass {
     }
 
     public void writeServer(ByteBuf buf) {
-        if (ConfigUtils.log.isDebugEnabled()) {
-            ConfigUtils.log.debug("write client:{}", this.clazz.className);
+        if (GenerateUtils.log.isDebugEnabled()) {
+            GenerateUtils.log.debug("write client:{}", this.clazz.className);
         }
         if (this.clazz.belong.isServer()) {
             ByteBufUtils.writeInt(buf, this.dataList.size());
@@ -39,8 +39,8 @@ public class DataWithClass {
     }
 
     public void writeClient(ByteBuf buf) {
-        if (ConfigUtils.log.isDebugEnabled()) {
-            ConfigUtils.log.debug("write client:{}", this.clazz.className);
+        if (GenerateUtils.log.isDebugEnabled()) {
+            GenerateUtils.log.debug("write client:{}", this.clazz.className);
         }
         if (this.clazz.belong.isClient()) {
             ByteBufUtils.writeInt(buf, this.dataList.size());

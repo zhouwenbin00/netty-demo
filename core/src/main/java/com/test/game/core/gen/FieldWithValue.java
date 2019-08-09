@@ -1,7 +1,7 @@
 package com.test.game.core.gen;
 
 import com.test.game.core.utils.ByteBufUtils;
-import com.test.game.core.utils.ConfigUtils;
+import com.test.game.core.utils.GenerateUtils;
 import io.netty.buffer.ByteBuf;
 
 /** 带值的属性 @Auther: zhouwenbin @Date: 2019/8/11 15:49 */
@@ -19,7 +19,7 @@ public class FieldWithValue {
         try {
             this.write(buf, this.value, server);
         } catch (Throwable e) {
-            ConfigUtils.log.error("write:{}", this.toString(), e);
+            GenerateUtils.log.error("write:{}", this.toString(), e);
             System.exit(-1);
         }
     }

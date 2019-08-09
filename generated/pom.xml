@@ -12,4 +12,18 @@
     <artifactId>generated</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.test</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

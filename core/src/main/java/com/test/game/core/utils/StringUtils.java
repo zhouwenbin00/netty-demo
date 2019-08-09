@@ -65,4 +65,10 @@ public abstract class StringUtils {
 
         return ret.toString();
     }
+
+    public static String capFirst(String s) {
+        return Character.isUpperCase(s.charAt(0))
+                ? s
+                : Character.toUpperCase(s.charAt(0)) + s.substring(1);
+    }
 }
