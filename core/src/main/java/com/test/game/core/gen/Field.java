@@ -1,15 +1,14 @@
 package com.test.game.core.gen;
 
-import lombok.Data;
 
 /** 属性 */
-@Data
 public class Field {
     public final String name;
     public final String desc;
     public final String asType;
     public final String javaType;
     public final BelongType belong;
+    public final boolean basic;
     public int col = -1;
 
     public Field(
@@ -19,6 +18,7 @@ public class Field {
         this.javaType = javaType;
         this.desc = fieldDesc;
         this.belong = belong;
+        this.basic = isBasic();
     }
 
     public boolean isBasic() {

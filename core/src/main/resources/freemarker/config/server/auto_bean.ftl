@@ -1,6 +1,6 @@
 <#macro read field><#if field.basic>builder.${field.name}<#else>${class.name?cap_first}Group.create_${field.name}(builder, builder.${field.name})</#if></#macro>
 <#macro type field>${field.javaType}</#macro>
-<#macro read2 field><#if field.basic>ByteBufUtils.read${field.stype?cap_first}(buf)<#else>ByteBufUtils.readString(buf)</#if></#macro>
+<#macro read2 field><#if field.basic>ByteBufUtils.read${field.javaType?cap_first}(buf)<#else>ByteBufUtils.readString(buf)</#if></#macro>
 <#macro type2 field><#if field.basic>${field.javaType}<#else>String</#if></#macro>
 package ${package};
 
@@ -72,7 +72,7 @@ public class ${class.name?cap_first} {
           ${class.name?cap_first} data = new ${class.name?cap_first}(buf);
           datas[i] = data;
         } catch (Throwable e) {
-          throw new com.test.game.core.exception.ConfigFieldException(e.getMessage(), i + 6, e);
+          throw new com.test.game.core.exception.ConfigRowException(e.getMessage(), i + 6, e);
         }
       }
 </#if>

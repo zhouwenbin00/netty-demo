@@ -64,7 +64,7 @@ public enum JavaType {
 
     public static JavaType create(String name) {
         for (JavaType value : values()) {
-            if (value.name == name) {
+            if (value.name.equals(name)) {
                 return value;
             }
         }

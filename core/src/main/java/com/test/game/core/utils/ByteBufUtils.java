@@ -136,6 +136,30 @@ public abstract class ByteBufUtils {
     }
 
     public static String readString(ByteBuf buf) {
-        return null;
+        byte[] bytes = readBytesWithLengthFlag(buf);
+        return bytes == null ? null : new String(bytes, CharSetUtils.UTF8);
+    }
+
+    private static byte[] readBytesWithLengthFlag(ByteBuf buf) {
+        int length = readInt(buf);
+        if (length > 0) {
+            if (length > 1048576) {
+                throw new IllegalArgumentException("string长度超过限制:" + length);
+            } else if (length > buf.readableBytes()) {
+                throw new IllegalArgumentException("string长度超过限制:" + length + ",实际长度:" + buf.readableBytes());
+            } else {
+                byte[] bytes = new byte[length];
+                buf.readBytes(bytes);
+                return bytes;
+            }
+        } else if (length == 0) {
+            return null;
+        } else {
+            throw new IllegalArgumentException("读取string出错:" + length);
+        }
+    }
+
+    public static boolean readBoolean(ByteBuf buf) {
+        return buf.readBoolean();
     }
 }
