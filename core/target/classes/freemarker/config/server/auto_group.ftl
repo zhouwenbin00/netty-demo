@@ -36,7 +36,7 @@ public class ConfigGroup {
                 this.${class.name?uncap_first}Group = new ${class.name?cap_first}Group(buf);
             } catch (Throwable e) {
                 throw new com.test.game.core.exception.ConfigFileException(
-                     e.getMessage(), "${class.desc}", e);
+                        e.getMessage(), "${class.desc}", e);
             }
     </#if>
 </#list>

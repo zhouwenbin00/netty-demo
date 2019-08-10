@@ -1,6 +1,5 @@
 package com.test.game.core.utils;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import com.test.game.core.gen.Class;
 import com.test.game.core.gen.DataWithClass;
 import freemarker.template.Configuration;
@@ -52,12 +51,6 @@ public abstract class GenerateUtils {
                 new File(autoDir.getAbsolutePath() + File.separator + FileUtils.package2path(pkg)));
         for (Class clazz : classes) {
             if (clazz.belong.isServer()) {
-                log.info(autoDir.getAbsolutePath()
-                        + File.separator
-                        + FileUtils.package2path(pkg)
-                        + File.separator
-                        + StringUtils.capFirst(clazz.name)
-                        + ".java");
                 FreeMarkerUtils.gen(
                         autoDir.getAbsolutePath()
                                 + File.separator
@@ -104,11 +97,72 @@ public abstract class GenerateUtils {
     }
 
     private static void generateClientCode(
-            String pkg,
-            List<Class> classes,
-            File clientCodeDir,
-            File clientCustomCodeDir,
-            String version) {}
+            String pkg, List<Class> classes, File autoDir, File customDir, String version)
+            throws Exception {
+        Configuration configuration =
+                FreeMarkerUtils.create(
+                        GenerateUtils.class.getClassLoader(), "freemarker/config/client");
+        Template autoBeanTemplate = configuration.getTemplate("auto_bean.ftl");
+        Template autoBeanGroupTemplate = configuration.getTemplate("auto_bean_group.ftl");
+        Template autoGroupTemplate = configuration.getTemplate("auto_group.ftl");
+        FileUtils.deleteDir(new File(autoDir.getAbsolutePath() + File.separator + "datasets"));
+        Iterator var10 = classes.iterator();
+
+        while (var10.hasNext()) {
+            Class clazz = (Class) var10.next();
+            if (clazz.belong.isClient()) {
+                FreeMarkerUtils.gen(
+                        autoDir.getAbsolutePath()
+                                + File.separator
+                                + "datasets/bean"
+                                + File.separator
+                                + StringUtils.capFirst(clazz.name)
+                                + ".as",
+                        autoBeanTemplate,
+                        (new MapBuilder<String, Object>(new HashMap<>()))
+                                .put("package", pkg)
+                                .put("class", clazz)
+                                .build(),
+                        true);
+                FreeMarkerUtils.gen(
+                        autoDir.getAbsolutePath()
+                                + File.separator
+                                + "datasets/container"
+                                + File.separator
+                                + StringUtils.capFirst(clazz.name)
+                                + "Container"
+                                + ".as",
+                        autoBeanGroupTemplate,
+                        (new MapBuilder<String, Object>(new HashMap<>()))
+                                .put("package", pkg)
+                                .put("class", clazz)
+                                .build(),
+                        true);
+            }
+        }
+
+//        var10 = customClasses.iterator();
+//
+//        while (var10.hasNext()) {
+//            CustomClass customClass = (CustomClass) var10.next();
+//            Preconditions.checkNotNull(customClass.belong, "没被引用,赶紧删除%s", customClass.name);
+//            if (!customClass.belong.isClient()) {}
+//        }
+
+        FreeMarkerUtils.gen(
+                autoDir.getAbsolutePath()
+                        + File.separator
+                        + "datasets"
+                        + File.separator
+                        + "ConfigGroup.as",
+                autoGroupTemplate,
+                (new MapBuilder<String, Object>(new HashMap<>()))
+                        .put("package", pkg)
+                        .put("classes", classes)
+                        .put("version", version)
+                        .build(),
+                true);
+    }
 
     /**
      * 生成bin文件

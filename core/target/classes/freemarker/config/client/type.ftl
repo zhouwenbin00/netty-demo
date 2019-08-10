@@ -1,0 +1,1 @@
+<#macro base_type type><#switch type><#case "boolean">Boolean<#break><#case "byte">int<#break><#case "short">int<#break><#case "long">Number<#break><#default>${type}</#switch></#macro>

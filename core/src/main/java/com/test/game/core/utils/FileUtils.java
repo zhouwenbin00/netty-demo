@@ -39,15 +39,14 @@ public abstract class FileUtils {
     public static void deleteDir(File dir) throws IOException {
         if (dir != null && dir.exists()) {
             if (dir.delete()) {
-                log.error("{} : {}", dir.exists(), dir.getAbsolutePath());
+                log.info("删除文件 : {}", dir.getAbsolutePath());
             } else {
                 File[] files = dir.listFiles();
                 for (File file : files) {
-
                     deleteDir(file);
                 }
                 if (dir.delete()) {
-                    log.error("{} : {}", dir.exists(), dir.getAbsolutePath());
+                    log.info("删除文件 : {}", dir.getAbsolutePath());
                 } else {
                     throw new IOException("can not remove file:" + dir.getAbsolutePath());
                 }

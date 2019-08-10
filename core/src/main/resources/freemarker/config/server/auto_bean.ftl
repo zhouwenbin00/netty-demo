@@ -1,10 +1,10 @@
 <#macro read field><#if field.basic>builder.${field.name}<#else>${class.name?cap_first}Group.create_${field.name}(builder, builder.${field.name})</#if></#macro>
 <#macro type field>${field.javaType}</#macro>
-<#macro read2 field><#if field.basic>ByteBufUtil.read${field.stype?cap_first}(buf)<#else>ByteBufUtil.readString(buf)</#if></#macro>
+<#macro read2 field><#if field.basic>ByteBufUtils.read${field.stype?cap_first}(buf)<#else>ByteBufUtils.readString(buf)</#if></#macro>
 <#macro type2 field><#if field.basic>${field.javaType}<#else>String</#if></#macro>
 package ${package};
 
-import shell.nio.ByteBufUtil;
+import com.test.game.core.utils.ByteBufUtils;
 import io.netty.buffer.ByteBuf;
 
 /** Created by FreeMarker. DO NOT EDIT!!! ${class.desc} */
@@ -27,7 +27,7 @@ public class ${class.name?cap_first} {
       try {
         this.${field.name} = <@read2 field/>;
       } catch (Throwable e) {
-        throw new shell.game.misc.ConfigFieldException(e.getMessage(), "${field.name}", e);
+        throw new com.test.game.core.exception.ConfigFieldException(e.getMessage(), "${field.name}", e);
       }
         </#if>
     </#list>
@@ -44,7 +44,7 @@ public class ${class.name?cap_first} {
     try {
       this.${field.name} = <@read field/>;
     } catch (Throwable e) {
-      throw new shell.game.misc.ConfigFieldException(e.getMessage(), "${field.name}", e);
+      throw new com.test.game.core.exception.ConfigFieldException(e.getMessage(), "${field.name}", e);
     }
         </#if>
         </#if>
@@ -66,13 +66,13 @@ public class ${class.name?cap_first} {
 
     protected Group(ByteBuf buf) {
 <#if class.belong.server>
-      datas = new ${class.name?cap_first}[ByteBufUtil.readInt(buf)];
+      datas = new ${class.name?cap_first}[ByteBufUtils.readInt(buf)];
       for (int i = 0; i < datas.length; ++i) {
         try {
           ${class.name?cap_first} data = new ${class.name?cap_first}(buf);
           datas[i] = data;
         } catch (Throwable e) {
-          throw new shell.game.misc.ConfigRowException(e.getMessage(), i + 6, e);
+          throw new com.test.game.core.exception.ConfigFieldException(e.getMessage(), i + 6, e);
         }
       }
 </#if>

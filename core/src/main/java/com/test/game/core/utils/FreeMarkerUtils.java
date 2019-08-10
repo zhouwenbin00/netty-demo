@@ -5,12 +5,15 @@ import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapperBuilder;
 import freemarker.template.Template;
 import freemarker.template.Version;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
 
 /** FreeMarker模板工具类 @Auther: zhouwenbin @Date: 2019/8/9 19:45 */
 public abstract class FreeMarkerUtils {
+    public static final Logger log = LoggerFactory.getLogger(FreeMarkerUtils.class);
     private FreeMarkerUtils() {}
 
     public static Configuration create(ClassLoader classLoader, String dir) {
@@ -35,6 +38,7 @@ public abstract class FreeMarkerUtils {
         }
         if (!file.getParentFile().exists()) {
             FileUtils.mkDir(file.getParentFile());
+            log.info("生成文件 : {}", file.getParentFile().getAbsolutePath() );
         }
         if (file.createNewFile()) {
             FileOutputStream fos = new FileOutputStream(file);
@@ -50,6 +54,7 @@ public abstract class FreeMarkerUtils {
             } finally {
                 fos.close();
             }
+            log.info("生成文件 : {}", path );
         }
     }
 }

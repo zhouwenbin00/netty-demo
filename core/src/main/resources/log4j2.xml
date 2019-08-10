@@ -12,7 +12,7 @@
     </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss:SSS} %p][%t-%c{1}]%m%n"/>
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss:SSS} %-5p][%t-%c{1}]%m%n"/>
         </Console>
         <RollingRandomAccessFile name="BACKEND_LOG_APPENDER"
                                  fileName="${opt_dir}/${opt_log_head}.log"
