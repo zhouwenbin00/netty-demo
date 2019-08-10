@@ -1,7 +1,7 @@
 package com.test.game.core.utils;
 
+import com.test.game.core.gen.*;
 import com.test.game.core.gen.Class;
-import com.test.game.core.gen.DataWithClass;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import io.netty.buffer.ByteBuf;
@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.lang.Class;
 import java.util.*;
 import java.util.zip.Deflater;
 
@@ -141,13 +142,14 @@ public abstract class GenerateUtils {
             }
         }
 
-//        var10 = customClasses.iterator();
-//
-//        while (var10.hasNext()) {
-//            CustomClass customClass = (CustomClass) var10.next();
-//            Preconditions.checkNotNull(customClass.belong, "没被引用,赶紧删除%s", customClass.name);
-//            if (!customClass.belong.isClient()) {}
-//        }
+        //        var10 = customClasses.iterator();
+        //
+        //        while (var10.hasNext()) {
+        //            CustomClass customClass = (CustomClass) var10.next();
+        //            Preconditions.checkNotNull(customClass.belong, "没被引用,赶紧删除%s",
+        // customClass.name);
+        //            if (!customClass.belong.isClient()) {}
+        //        }
 
         FreeMarkerUtils.gen(
                 autoDir.getAbsolutePath()
@@ -244,5 +246,40 @@ public abstract class GenerateUtils {
         }
 
         return StringUtils.md5(sb.toString());
+    }
+
+    public static void genMsgSrc(
+            String pkg,
+            File serverAutoCodeDir,
+            File serverCustomCodeDir,
+            File clientAutoCodeDir,
+            File clientCustomCodeDir) {}
+
+    public static MessageParser parse(String pkg, File idFile) throws IOException {
+        List<OriginBean> obs = new ArrayList();
+        List<OriginEnum> oes = new ArrayList();
+        List<OriginMessage> oms = new ArrayList();
+        IDGenerator idGenerator = new IDGenerator(idFile);
+        ClassLoader classLoader = GenerateUtils.class.getClassLoader();
+
+        for (java.lang.Class<?> clazz : ReflectUtils.allClass(classLoader, pkg)) {
+            if (clazz.isAnnotationPresent(BeanClass.class)) {
+                if (clazz.isEnum()) {
+                    oes.add(new OriginEnum(clazz));
+                } else {
+                    obs.add(new OriginBean(clazz, pkg));
+                }
+            } else {
+                if (clazz.isAnnotationPresent(ClientMessage.class)
+                        || clazz.isAnnotationPresent(ServerMessage.class)) {
+                    oms.add(new OriginMessage(clazz, idGenerator, pkg));
+                } else {
+                    throw new IOException(clazz + "没有注解");
+                }
+            }
+        }
+
+        idGenerator.save();
+        return new MessageParser(pkg, obs, oes, oms);
     }
 }
