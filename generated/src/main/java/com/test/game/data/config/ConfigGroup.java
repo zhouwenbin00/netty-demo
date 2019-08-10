@@ -14,7 +14,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 public class ConfigGroup {
     public final String CODE_VERSION = "2e88aa7a022544435660b6dabfbc6cb8";
     public final byte[] DATA_VERSION;
-    public final Q_test1Group q_test1Group; // 测试表1
+    public final Q_test1Group q_test1Group; // 新建 XLSX 工作表-测试表1
 
     public ConfigGroup(InputStream is, Factory2<byte[], Integer> factory) throws IOException {
         ByteBuf buf = ByteBufAllocator.DEFAULT.buffer();
@@ -29,7 +29,7 @@ public class ConfigGroup {
                 this.q_test1Group = new Q_test1Group(buf);
             } catch (Throwable e) {
                 throw new com.test.game.core.exception.ConfigFileException(
-                        e.getMessage(), "测试表1", e);
+                        e.getMessage(), "新建 XLSX 工作表-测试表1", e);
             }
         } finally {
             buf.release();
@@ -39,8 +39,9 @@ public class ConfigGroup {
     public void check() {
         try {
             this.q_test1Group.check(this);
-        } catch(Throwable e) {
-      throw new com.test.game.core.exception.ConfigFileException(e.getMessage(), "测试表1", e);
+        } catch (Throwable e) {
+            throw new com.test.game.core.exception.ConfigFileException(
+                    e.getMessage(), "新建 XLSX 工作表-测试表1", e);
         }
     }
 }

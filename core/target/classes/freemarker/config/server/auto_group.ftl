@@ -50,8 +50,9 @@ public class ConfigGroup {
     <#if class.belong.server>
         try {
             this.${class.name?uncap_first}Group.check(this);
-        } catch(Throwable e) {
-      throw new com.test.game.core.exception.ConfigFileException(e.getMessage(), "${class.desc}", e);
+        } catch (Throwable e) {
+            throw new com.test.game.core.exception.ConfigFileException(
+                    e.getMessage(), "${class.desc}", e);
         }
     </#if>
 </#list>

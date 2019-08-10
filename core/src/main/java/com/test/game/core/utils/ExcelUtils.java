@@ -37,10 +37,7 @@ public abstract class ExcelUtils {
         return file.getName().endsWith(excel_suffix);
     }
 
-    public static void parse(
-            String excelDir,
-            List<Class> classes,
-            List<DataWithClass> datas) {
+    public static void parse(String excelDir, List<Class> classes, List<DataWithClass> datas) {
         File dir = new File(excelDir);
         Preconditions.checkArgument(dir.exists(), "directory not exists : %s", excelDir);
         Preconditions.checkArgument(dir.isDirectory());
@@ -88,16 +85,16 @@ public abstract class ExcelUtils {
     }
 
     public static void parseSheet(
-            String fileName,
-            Sheet sheet,
-            List<Class> classes,
-            List<DataWithClass> datas) {
+            String fileName, Sheet sheet, List<Class> classes, List<DataWithClass> datas) {
         boolean client = false;
         boolean server = false;
         // 表名
         String sheetName = sheet.getSheetName();
         // 表描述
-        String desc = getStringValue(sheet, 0, 0);
+        String desc =
+                fileName.substring(0, fileName.lastIndexOf("."))
+                        + "-"
+                        + getStringValue(sheet, 0, 0);
         // 属性列表
         List<Field> fields = new LinkedList<>();
         int blankFieldCount = 0;
