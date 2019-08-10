@@ -28,21 +28,11 @@ public class OriginMessage extends NameAndDesc {
     private final String cfgPkg;
 
     public OriginMessage(java.lang.Class<?> clazz, IDGenerator idGenerator, String cfgPkg) {
-        super(
-                clazz.getSimpleName(),
-                clazz.isAnnotationPresent(ClientMessage.class)
-                        ? ReflectUtils.annotation(clazz, ClientMessage.class).desc()
-                        : ReflectUtils.annotation(clazz, ServerMessage.class).desc());
+        super(clazz.getSimpleName(), ReflectUtils.annotation(clazz, MessageClass.class).desc());
         this.cfgPkg = cfgPkg;
-        if (clazz.isAnnotationPresent(ClientMessage.class)) {
-            ClientMessage annotation = ReflectUtils.annotation(clazz, ClientMessage.class);
-            this.from = annotation.from();
-            this.to = annotation.to();
-        } else {
-            ServerMessage annotation = ReflectUtils.annotation(clazz, ServerMessage.class);
-            this.from = annotation.from();
-            this.to = annotation.to();
-        }
+        MessageClass annotation = ReflectUtils.annotation(clazz, MessageClass.class);
+        this.from = annotation.from();
+        this.to = annotation.to();
 
         this.pkg = clazz.getPackage().getName();
         java.lang.Class<?> requestClass = ReflectUtils.staticInsideClass(clazz, "Req");
@@ -91,9 +81,7 @@ public class OriginMessage extends NameAndDesc {
                     this.error.add(
                             new NameAndDesc(
                                     field.getName(),
-                                    ReflectUtils.annotation(
-                                            field, MessageField.class)
-                                            .desc()));
+                                    ReflectUtils.annotation(field, MessageField.class).desc()));
                 }
             }
         } else {

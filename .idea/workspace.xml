@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5d8563-7bdf-4f0f-a4dd-afe75cee24e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/BeanClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,14 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="268" column="24" lean-forward="true" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -45,11 +53,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="-905">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,26 +77,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="387">
+              <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
                 <element signature="e#469#470#0" expanded="true" />
                 <element signature="e#536#537#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/ServerMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/CfgSrcGen.java" />
         <option value="$PROJECT_DIR$/generated/pom.xml" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/net/Message.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/io/IOUtils.java" />
@@ -223,10 +221,11 @@
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/NoHandlerAnnotation.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/BeanClass.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageField.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ReflectUtils.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" />
       </list>
     </option>
   </component>
@@ -380,7 +379,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565431042528" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565431335856" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last.edited.regexp" value="Sample Text" />
@@ -502,12 +501,12 @@
       <workItem from="1565505647907" duration="15274000" />
       <workItem from="1567100725618" duration="6013000" />
       <workItem from="1565374444694" duration="5830000" />
-      <workItem from="1565419101074" duration="11690000" />
+      <workItem from="1565419101074" duration="11923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74897000" />
+    <option name="totallyTimeSpent" value="75130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -784,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/repository/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/reflect/ClassPath.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -946,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="268" column="24" lean-forward="true" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/ClientMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -991,10 +973,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/reflect/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-905">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="387">
+          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#388#389#0" expanded="true" />
@@ -1005,17 +1011,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/reflect/Field.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="285">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>

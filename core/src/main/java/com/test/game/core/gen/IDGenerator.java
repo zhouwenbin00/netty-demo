@@ -1,7 +1,13 @@
 package com.test.game.core.gen;
 
+import com.test.game.core.utils.CharSetUtils;
+
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /** @Auther: zhouwenbin @Date: 2019/8/10 16:54 */
@@ -38,5 +44,20 @@ public class IDGenerator {
     private void add(int id, String name) {
         this.id2name.put(id, name);
         this.name2id.put(name, id);
+    }
+
+    public void save() throws IOException {
+        FileOutputStream fos = new FileOutputStream(this.file);
+
+        try {
+
+            for (Map.Entry<Integer, String> entry : this.id2name.entrySet()) {
+                fos.write(
+                        (entry.getKey() + "," + entry.getValue() + "\n")
+                                .getBytes(CharSetUtils.UTF8));
+            }
+        } finally {
+            fos.close();
+        }
     }
 }

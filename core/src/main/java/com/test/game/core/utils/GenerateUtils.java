@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.lang.Class;
 import java.util.*;
 import java.util.zip.Deflater;
 
