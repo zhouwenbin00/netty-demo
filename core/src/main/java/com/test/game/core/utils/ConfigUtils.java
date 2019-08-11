@@ -4,6 +4,7 @@ import com.test.game.core.gen.Class;
 import com.test.game.core.gen.DataWithClass;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

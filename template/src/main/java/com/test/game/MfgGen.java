@@ -6,7 +6,7 @@ import com.test.game.core.utils.ConfigUtils;
 import java.io.File;
 import java.io.IOException;
 
-/** @Auther: zhouwenbin @Date: 2019/8/8 19:52 */
+/** 生成config的bin文件 @Auther: zhouwenbin @Date: 2019/8/8 19:52 */
 public class MfgGen {
 
     private static final String execl_dir = "cfg";
@@ -20,10 +20,12 @@ public class MfgGen {
             for (File file : share_cfg_dir.listFiles()) {
                 file.delete();
             }
+        }else {
+            share_cfg_dir.mkdirs();
         }
-        File file = new File(execl_dir);
-        for (File f : file.listFiles()) {
-            if (f.getName().startsWith("~")) {
+        File dir = new File(execl_dir);
+        for (File file : dir.listFiles()) {
+            if (file.getName().startsWith("~")) {
                 continue;
             }
             if (share_cfg_dir.exists()) {

@@ -1,4 +1,4 @@
-package com.test.game.core.utils;
+package com.test.game.logic;
 
 import com.test.game.data.DataCenter;
 import com.test.game.data.account.AccountDataCenter;

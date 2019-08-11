@@ -19,6 +19,28 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>data</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>logic</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>template</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+
             <!-- netty -->
             <dependency>
                 <groupId>io.netty</groupId>
@@ -32,10 +54,19 @@
                 <version>1.7.25</version>
             </dependency>
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>1.7.25</version>
-                <scope>test</scope>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>2.11.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.11.1</version>
+            </dependency>
+            <dependency> <!-- 桥接：告诉Slf4j使用Log4j2 -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>2.11.1</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -85,7 +116,6 @@
                 <artifactId>jsoup</artifactId>
                 <version>1.8.3</version>
             </dependency>
-
 
 
         </dependencies>
