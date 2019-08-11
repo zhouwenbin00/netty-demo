@@ -1,21 +1,36 @@
 package com.test.game;
 
+import com.google.common.io.Files;
 import com.test.game.core.utils.ConfigUtils;
 
 import java.io.File;
+import java.io.IOException;
 
-/**
- * @Auther: zhouwenbin
- * @Date: 2019/8/8 19:52
- */
+/** @Auther: zhouwenbin @Date: 2019/8/8 19:52 */
 public class MfgGen {
 
-    private static final String cfg_gen_dir = "com.test.game.data.config";
     private static final String execl_dir = "cfg";
     private static final File server_file = new File("cfg/server.bin");
     private static final File client_file = new File("cfg/client.bin");
+    private static final File share_cfg_dir = new File("../share/zwb/config");
 
-    public static void main(String[] args) {
-        ConfigUtils.export(execl_dir, server_file ,client_file);
+    public static void main(String[] args) throws IOException {
+        ConfigUtils.export(execl_dir, server_file, client_file);
+        if (share_cfg_dir.exists()) {
+            for (File file : share_cfg_dir.listFiles()) {
+                file.delete();
+            }
+        }
+        File file = new File(execl_dir);
+        for (File f : file.listFiles()) {
+            if (f.getName().startsWith("~")) {
+                continue;
+            }
+            if (share_cfg_dir.exists()) {
+                File newFile = new File(share_cfg_dir.getAbsolutePath() + "/" + file.getName());
+                newFile.createNewFile();
+                Files.copy(file, newFile);
+            }
+        }
     }
 }
