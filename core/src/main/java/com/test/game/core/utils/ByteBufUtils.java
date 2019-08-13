@@ -1,9 +1,13 @@
 package com.test.game.core.utils;
 
+import com.test.game.core.net.message.Bean;
 import io.netty.buffer.ByteBuf;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** @Auther: zhouwenbin @Date: 2019/8/5 13:50 */
 public abstract class ByteBufUtils {
+    private static final Logger log = LoggerFactory.getLogger(ByteBufUtils.class);
 
     private ByteBufUtils() {}
 
@@ -161,5 +165,30 @@ public abstract class ByteBufUtils {
 
     public static boolean readBoolean(ByteBuf buf) {
         return buf.readBoolean();
+    }
+
+    public static void writeBean(ByteBuf buf, Bean bean) {
+        if (bean == null) {
+            writeBoolean(buf, false);
+        } else {
+            writeBoolean(buf, true);
+            bean.write(buf);
+        }
+
+    }
+
+    public static <T extends Bean> T readBean(ByteBuf buf, Class<T> clazz) {
+        if (readBoolean(buf)) {
+            try {
+                T bean = (T) clazz.newInstance();
+                bean.read(buf);
+                return bean;
+            } catch (IllegalAccessException | InstantiationException var3) {
+                log.error("new error???", var3);
+                return null;
+            }
+        } else {
+            return null;
+        }
     }
 }

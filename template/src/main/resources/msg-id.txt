@@ -1,0 +1,3 @@
+0,com.test.game.message_module.account.AccountLogin$Req
+1,com.test.game.message_module.account.AccountLogin$Res
+2,com.test.game.message_module.account.AccountLogin$Fail

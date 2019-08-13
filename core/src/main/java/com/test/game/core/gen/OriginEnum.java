@@ -4,6 +4,7 @@ import com.test.game.core.utils.ReflectUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /** @Auther: zhouwenbin @Date: 2019/8/10 16:54 */
@@ -30,5 +31,15 @@ public class OriginEnum extends NameAndDesc {
                                 ReflectUtils.annotation(field, MessageField.class).desc()));
             }
         }
+    }
+
+    public void buildMD5(StringBuilder sb) {
+        sb.append(this.name).append(this.pkg);
+
+        for (NameAndDesc field : this.fields) {
+            sb.append(field.name);
+        }
+
+        sb.append(this.start);
     }
 }

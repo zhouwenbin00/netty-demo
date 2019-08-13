@@ -28,6 +28,11 @@
             <groupId>com.test</groupId>
             <artifactId>core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.test</groupId>
+            <artifactId>generated</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

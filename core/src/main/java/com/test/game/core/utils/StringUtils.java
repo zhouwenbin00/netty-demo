@@ -71,4 +71,8 @@ public abstract class StringUtils {
                 ? s
                 : Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
+
+    public static String upperFirstAndLowerOther(String s) {
+        return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
+    }
 }

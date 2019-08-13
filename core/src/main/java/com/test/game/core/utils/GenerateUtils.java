@@ -2,6 +2,7 @@ package com.test.game.core.utils;
 
 import com.test.game.core.gen.*;
 import com.test.game.core.gen.Class;
+import com.test.game.core.gen.Enum;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import io.netty.buffer.ByteBuf;
@@ -248,20 +249,87 @@ public abstract class GenerateUtils {
     }
 
     public static void genMsgSrc(
-            String pkg,
-            File serverAutoCodeDir,
-            File serverCustomCodeDir,
-            File clientAutoCodeDir,
-            File clientCustomCodeDir) {}
+            String pkg, File idFile, File sAutoDir, File sCustomDir, File cAutoDir, File cCustomDir)
+            throws Exception {
+        MessageParser parser = parse(pkg, idFile);
+        Assemble assemble = Assemble.assemble(parser);
+        FileUtils.deleteDir(
+                new File(
+                        sAutoDir.getAbsolutePath() + File.separator + FileUtils.package2path(pkg)));
+        generateJava(sCustomDir, sAutoDir, assemble.javaResult);
+        FileUtils.deleteDir(new File(cAutoDir.getAbsolutePath() + File.separator + "com"));
+        FileUtils.deleteDir(new File(cCustomDir.getAbsolutePath() + File.separator + "com"));
+    }
+
+    public static void generateJava(File customDir, File autoDir, JavaResult result)
+            throws Exception {
+        Configuration configuration =
+                FreeMarkerUtils.create(
+                        GenerateUtils.class.getClassLoader(), "freemarker/message/server");
+        Template template = configuration.getTemplate("auto_bean.ftl");
+        for (Bean bean : result.beans) {
+            generateJava(autoDir, bean.getPackage(), bean.getName(), bean, template, true);
+        }
+
+        template = configuration.getTemplate("auto_enum.ftl");
+        for (Enum e : result.enums) {
+            generateJava(autoDir, e.getPackage(), e.getName(), e, template, true);
+        }
+
+        template = configuration.getTemplate("auto_error.ftl");
+        for (ErrorMessage error : result.errors) {
+            generateJava(autoDir, error.getPackage(), error.getName(), error, template, true);
+        }
+
+        template = configuration.getTemplate("auto_message.ftl");
+        for (Message message : result.messages) {
+            generateJava(autoDir, message.getPackage(), message.getName(), message, template, true);
+        }
+        template = configuration.getTemplate("auto_message_group.ftl");
+        for (MessageGroup mg : result.mgs) {
+            generateJava(autoDir, mg.getPackage(), mg.getName(), mg, template, true);
+        }
+
+        template = configuration.getTemplate("auto_message_version.ftl");
+        generateJava(
+                autoDir,
+                result.version.getPackage(),
+                result.version.getName(),
+                result.version,
+                template,
+                true);
+        template = configuration.getTemplate("custom_handler.ftl");
+        for (Handler handler : result.handlers) {
+            generateJava(
+                    customDir, handler.getPackage(), handler.getName(), handler, template, false);
+        }
+
+        template = configuration.getTemplate("custom_handler_group.ftl");
+        for (HandlerGroup hg : result.hgs) {
+            generateJava(customDir, hg.getPackage(), hg.getName(), hg, template, true);
+        }
+        template = configuration.getTemplate("custom_handler_guice_module.ftl");
+        for (JavaGuiceModule jgm : result.jgms) {
+            generateJava(customDir, jgm.getPackage(), jgm.getName(), jgm, template, true);
+        }
+    }
+
+    static void generateJava(
+            File dir, String pkg, String name, Object object, Template template, boolean rewrite)
+            throws Exception {
+        String pathPrefix = dir.getAbsolutePath() + File.separator + FileUtils.package2path(pkg);
+        FreeMarkerUtils.gen(
+                pathPrefix + File.separator + name + ".java", template, object, rewrite);
+    }
 
     public static MessageParser parse(String pkg, File idFile) throws IOException {
-        List<OriginBean> obs = new ArrayList();
-        List<OriginEnum> oes = new ArrayList();
-        List<OriginMessage> oms = new ArrayList();
+        List<OriginBean> obs = new ArrayList<>();
+        List<OriginEnum> oes = new ArrayList<>();
+        List<OriginMessage> oms = new ArrayList<>();
         IDGenerator idGenerator = new IDGenerator(idFile);
         ClassLoader classLoader = GenerateUtils.class.getClassLoader();
 
-        for (java.lang.Class<?> clazz : ReflectUtils.allClass(classLoader, pkg)) {
+        for (java.lang.Class<?> clazz : ReflectUtils.allClass(classLoader,pkg)) {
             if (clazz.isAnnotationPresent(BeanClass.class)) {
                 if (clazz.isEnum()) {
                     oes.add(new OriginEnum(clazz));
@@ -269,8 +337,7 @@ public abstract class GenerateUtils {
                     obs.add(new OriginBean(clazz, pkg));
                 }
             } else {
-                if (clazz.isAnnotationPresent(ClientMessage.class)
-                        || clazz.isAnnotationPresent(ServerMessage.class)) {
+                if (clazz.isAnnotationPresent(MessageClass.class)) {
                     oms.add(new OriginMessage(clazz, idGenerator, pkg));
                 } else {
                     throw new IOException(clazz + "没有注解");

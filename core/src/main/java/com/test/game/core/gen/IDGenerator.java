@@ -3,11 +3,9 @@ package com.test.game.core.gen;
 import com.test.game.core.utils.CharSetUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 /** @Auther: zhouwenbin @Date: 2019/8/10 16:54 */

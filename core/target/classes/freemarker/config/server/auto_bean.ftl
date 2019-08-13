@@ -76,18 +76,18 @@ public class ${class.name?cap_first} {
                 }
             }
 </#if>
-    }
+        }
 <#if class.belong.server>
 
-    protected final ${class.name?cap_first}[] getAndSetNull() {
+        protected final ${class.name?cap_first}[] getAndSetNull() {
       ${class.name?cap_first}[] r = get();
-      this.datas = null;
-      return r;
-    }
+            this.datas = null;
+            return r;
+        }
 
-    protected final ${class.name?cap_first}[] get() {
-        return datas;
-    }
+        protected final ${class.name?cap_first}[] get() {
+            return datas;
+        }
 </#if>
     }
 </#if>

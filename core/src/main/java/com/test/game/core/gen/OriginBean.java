@@ -5,6 +5,7 @@ import com.test.game.core.utils.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /** @Auther: zhouwenbin @Date: 2019/8/10 16:54 */
@@ -42,5 +43,39 @@ public class OriginBean extends NameAndDesc {
         } else {
             this.client_name = annotation.client_name();
         }
+    }
+
+    public String getPkg() {
+        return pkg;
+    }
+
+    public List<OriginField> getFields() {
+        return fields;
+    }
+
+    public String getClient_package() {
+        return client_package;
+    }
+
+    public String getClient_name() {
+        return client_name;
+    }
+
+    public String getCfgPkg() {
+        return cfgPkg;
+    }
+
+    public void buildMD5(StringBuilder sb) {
+
+        sb.append(this.name).append(this.pkg);
+        Iterator var2 = this.fields.iterator();
+
+        while (var2.hasNext()) {
+            OriginField field = (OriginField) var2.next();
+            field.buildMD5(sb);
+        }
+
+        sb.append(this.client_package);
+        sb.append(this.client_name);
     }
 }

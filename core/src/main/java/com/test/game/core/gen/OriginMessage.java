@@ -7,6 +7,7 @@ import com.test.game.core.utils.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /** @Auther: zhouwenbin @Date: 2019/8/10 16:54 */
@@ -40,13 +41,10 @@ public class OriginMessage extends NameAndDesc {
         this.request = new ArrayList<>();
         this.requestID = idGenerator.id(requestClass);
         this.ignoreRequestHandler = requestClass.getAnnotation(NoHandlerAnnotation.class) != null;
-        java.lang.reflect.Field[] var6 = requestClass.getDeclaredFields();
-        int var7 = var6.length;
-        int var8;
-        for (var8 = 0; var8 < var7; ++var8) {
-            java.lang.reflect.Field field = var6[var8];
+        for (Field field : requestClass.getDeclaredFields()) {
             this.request.add(new OriginField(field));
         }
+
         java.lang.Class<?> responseClass = ReflectUtils.staticInsideClass(clazz, "Res");
         this.responseID = idGenerator.id(responseClass);
         this.ignoreResponseHandler =
@@ -55,11 +53,7 @@ public class OriginMessage extends NameAndDesc {
         int var16;
         if (responseClass != null) {
             this.response = new ArrayList<>();
-            java.lang.reflect.Field[] var13 = responseClass.getDeclaredFields();
-            var8 = var13.length;
-
-            for (var16 = 0; var16 < var8; ++var16) {
-                java.lang.reflect.Field field = var13[var16];
+            for (Field field : responseClass.getDeclaredFields()) {
                 this.response.add(new OriginField(field));
             }
         } else {
@@ -72,11 +66,7 @@ public class OriginMessage extends NameAndDesc {
                 errorClass == null || errorClass.getAnnotation(NoHandlerAnnotation.class) != null;
         if (errorClass != null) {
             this.error = new ArrayList<>();
-            java.lang.reflect.Field[] var15 = errorClass.getDeclaredFields();
-            var16 = var15.length;
-
-            for (int var17 = 0; var17 < var16; ++var17) {
-                Field field = var15[var17];
+            for (Field field : errorClass.getDeclaredFields()) {
                 if (!ReflectUtils.isPrivate(field)) {
                     this.error.add(
                             new NameAndDesc(
@@ -98,6 +88,102 @@ public class OriginMessage extends NameAndDesc {
             this.client_name = this.name;
         } else {
             this.client_name = annotation.client_name();
+        }
+    }
+
+    public String getPkg() {
+        return pkg;
+    }
+
+    public Message.NodeType getFrom() {
+        return from;
+    }
+
+    public Message.NodeType getTo() {
+        return to;
+    }
+
+    public int getRequestID() {
+        return requestID;
+    }
+
+    public int getResponseID() {
+        return responseID;
+    }
+
+    public int getErrorID() {
+        return errorID;
+    }
+
+    public boolean isIgnoreRequestHandler() {
+        return ignoreRequestHandler;
+    }
+
+    public boolean isIgnoreResponseHandler() {
+        return ignoreResponseHandler;
+    }
+
+    public boolean isIgnoreErrorHandler() {
+        return ignoreErrorHandler;
+    }
+
+    public List<OriginField> getRequest() {
+        return request;
+    }
+
+    public List<OriginField> getResponse() {
+        return response;
+    }
+
+    public List<NameAndDesc> getError() {
+        return error;
+    }
+
+    public String getClient_package() {
+        return client_package;
+    }
+
+    public String getClient_name(Message.NodeType from, Message.NodeType to) {
+        if (to == Message.NodeType.CLIENT) {
+            return "Res" + this.client_name;
+        } else {
+            return from == Message.NodeType.CLIENT ? "Req" + this.client_name : this.client_name;
+        }
+    }
+
+    public String getCfgPkg() {
+        return cfgPkg;
+    }
+
+    public void buildMD5(StringBuilder sb) {
+        sb.append(this.name)
+                .append(this.pkg)
+                .append(this.from.toString())
+                .append(this.to.toString())
+                .append(this.requestID)
+                .append(this.responseID)
+                .append(this.errorID)
+                .append(this.ignoreRequestHandler)
+                .append(this.ignoreResponseHandler)
+                .append(this.ignoreErrorHandler)
+                .append(this.client_package)
+                .append(this.client_name);
+        if (this.request != null) {
+            for (OriginField field : this.request) {
+                field.buildMD5(sb);
+            }
+        }
+
+        if (this.response != null) {
+            for (OriginField field : this.response) {
+                field.buildMD5(sb);
+            }
+        }
+
+        if (this.error != null) {
+            for (NameAndDesc nameAndDesc : this.error) {
+                sb.append(nameAndDesc.name);
+            }
         }
     }
 }
