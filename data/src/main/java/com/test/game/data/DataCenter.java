@@ -1,6 +1,6 @@
 package com.test.game.data;
 
-import com.test.game.data.account.AccountDataCenter;
+import com.test.game.data.game.account.AccountDataCenter;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;

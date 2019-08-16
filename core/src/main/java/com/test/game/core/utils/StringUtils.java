@@ -6,6 +6,9 @@ import java.security.NoSuchAlgorithmException;
 
 /** @Auther: zhouwenbin @Date: 2019/8/9 00:35 */
 public abstract class StringUtils {
+    /*占位符*/
+    private static String placeholder = "{@}";
+
     private StringUtils() {}
 
     public static boolean isNullOrEmpty(String s) {
@@ -66,13 +69,52 @@ public abstract class StringUtils {
         return ret.toString();
     }
 
+    /**
+     * 首字母大写
+     *
+     * @param s
+     * @return
+     */
     public static String capFirst(String s) {
         return Character.isUpperCase(s.charAt(0))
                 ? s
                 : Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
 
+    /**
+     * 首字母大写，其他小写
+     *
+     * @param s
+     * @return
+     */
     public static String upperFirstAndLowerOther(String s) {
         return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
+    }
+
+    /**
+     * 格式化字符串
+     *
+     * @param s
+     * @param params
+     * @return
+     */
+    public static String format(String s, Object... params) {
+        StringBuilder sb = new StringBuilder();
+        if (params != null && params.length > 0) {
+            for (Object param : params) {
+                int index = s.indexOf(placeholder);
+                if (index != -1) {
+                    sb.append(s, 0, index);
+                    sb.append(param.toString());
+                    s = s.substring(index + 3);
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String format = format("jar:file {@} !/ {@}", true, "is");
+        System.out.println(format);
     }
 }

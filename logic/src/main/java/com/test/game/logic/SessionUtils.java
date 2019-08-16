@@ -1,7 +1,7 @@
 package com.test.game.logic;
 
 import com.test.game.data.DataCenter;
-import com.test.game.data.account.AccountDataCenter;
+import com.test.game.data.game.account.AccountDataCenter;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
