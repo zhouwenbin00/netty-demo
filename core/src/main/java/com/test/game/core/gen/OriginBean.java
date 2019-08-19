@@ -23,7 +23,7 @@ public class OriginBean extends NameAndDesc {
                         ? ""
                         : (clazz.getAnnotation(BeanClass.class)).desc());
 
-        this.pkg = clazz.getPackage().getName();
+        this.pkg = cfgPkg + clazz.getPackage().getName().substring(clazz.getPackage().getName().lastIndexOf("."));
         this.cfgPkg = cfgPkg;
         this.fields = new ArrayList<>();
         for (Field field : clazz.getDeclaredFields()) {

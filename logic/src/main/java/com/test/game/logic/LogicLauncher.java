@@ -4,6 +4,8 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.test.game.core.server.Server;
 import com.test.game.data.Launcher;
+import com.test.game.data.net.ServerLogicHolder;
+import com.test.game.logic.net.ClientToServerDispatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +19,10 @@ public class LogicLauncher extends Launcher {
 
     @Inject
     private Server server;
+    @Inject
+    private ClientToServerDispatcher dispatcher;
+    @Inject
+    private ServerLogicHolder holder;
 
     @Override
     public void launch() throws Exception {
@@ -39,7 +45,10 @@ public class LogicLauncher extends Launcher {
     public void jar() throws Exception {}
 
     @Override
-    public void registerScript() {}
+    public void registerScript() {
+        holder.launcher = this;
+        holder.dispatcher = this.dispatcher;
+    }
 
     @Override
     public void shutdown() throws InterruptedException {

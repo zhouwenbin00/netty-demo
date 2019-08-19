@@ -5,9 +5,8 @@ import com.google.inject.Injector;
 import com.google.inject.Stage;
 import com.test.game.data.CmdParams;
 import com.test.game.data.Launcher;
-import com.test.game.data.Main;
 import com.test.game.data.ShutdownHooks;
-import com.test.game.message_module.guice.ClientToServerGuiceModule;
+import com.test.game.logic.guice.DataModule;
 
 /** logic层入口 @Auther: zhouwenbin @Date: 2019/8/5 20:38 */
 public class LogicMain extends com.test.game.data.Main {
@@ -21,8 +20,7 @@ public class LogicMain extends com.test.game.data.Main {
 
     @Override
     public Injector jar(CmdParams params) throws Exception {
-        Injector p = Guice.createInjector(Stage.PRODUCTION, new LogicParentModule(Main.injector));
-        Injector injector = p.createChildInjector(new LogicModule(), new ClientToServerGuiceModule());
+        Injector injector = Guice.createInjector(Stage.PRODUCTION, new DataModule());
         Launcher launcher = injector.getInstance(Launcher.class);
         launcher.setParams(params);
         launcher.registerScript();

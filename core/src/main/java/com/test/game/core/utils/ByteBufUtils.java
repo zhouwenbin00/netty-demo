@@ -91,7 +91,7 @@ public abstract class ByteBufUtils {
         }
     }
 
-    private static void writeBytesWithLengthFlag(ByteBuf buf, byte[] bytes) {
+    public static void writeBytesWithLengthFlag(ByteBuf buf, byte[] bytes) {
         if (bytes == null) {
             writeInt(buf, 0);
         } else if (bytes.length > Num.MB) {
@@ -144,7 +144,7 @@ public abstract class ByteBufUtils {
         return bytes == null ? null : new String(bytes, CharSetUtils.UTF8);
     }
 
-    private static byte[] readBytesWithLengthFlag(ByteBuf buf) {
+    public static byte[] readBytesWithLengthFlag(ByteBuf buf) {
         int length = readInt(buf);
         if (length > 0) {
             if (length > 1048576) {

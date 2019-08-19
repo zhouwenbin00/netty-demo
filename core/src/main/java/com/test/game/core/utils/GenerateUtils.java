@@ -249,9 +249,9 @@ public abstract class GenerateUtils {
     }
 
     public static void genMsgSrc(
-            String pkg, File idFile, File sAutoDir, File sCustomDir, File cAutoDir, File cCustomDir)
+            String pkg,String target_pkg, File idFile, File sAutoDir, File sCustomDir, File cAutoDir, File cCustomDir)
             throws Exception {
-        MessageParser parser = parse(pkg, idFile);
+        MessageParser parser = parse(pkg, target_pkg, idFile);
         Assemble assemble = Assemble.assemble(parser);
         FileUtils.deleteDir(
                 new File(
@@ -322,7 +322,7 @@ public abstract class GenerateUtils {
                 pathPrefix + File.separator + name + ".java", template, object, rewrite);
     }
 
-    public static MessageParser parse(String pkg, File idFile) throws IOException {
+    public static MessageParser parse(String pkg,String target_pkg, File idFile) throws IOException {
         List<OriginBean> obs = new ArrayList<>();
         List<OriginEnum> oes = new ArrayList<>();
         List<OriginMessage> oms = new ArrayList<>();
@@ -332,13 +332,13 @@ public abstract class GenerateUtils {
         for (java.lang.Class<?> clazz : ReflectUtils.allClass(classLoader,pkg)) {
             if (clazz.isAnnotationPresent(BeanClass.class)) {
                 if (clazz.isEnum()) {
-                    oes.add(new OriginEnum(clazz));
+                    oes.add(new OriginEnum(clazz , target_pkg));
                 } else {
-                    obs.add(new OriginBean(clazz, pkg));
+                    obs.add(new OriginBean(clazz, target_pkg));
                 }
             } else {
                 if (clazz.isAnnotationPresent(MessageClass.class)) {
-                    oms.add(new OriginMessage(clazz, idGenerator, pkg));
+                    oms.add(new OriginMessage(clazz, idGenerator, target_pkg));
                 } else {
                     throw new IOException(clazz + "没有注解");
                 }
@@ -346,6 +346,6 @@ public abstract class GenerateUtils {
         }
 
         idGenerator.save();
-        return new MessageParser(pkg, obs, oes, oms);
+        return new MessageParser(target_pkg, obs, oes, oms);
     }
 }

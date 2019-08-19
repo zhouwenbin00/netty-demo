@@ -1,10 +1,7 @@
 package com.test.game.data;
 
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.Stage;
 import com.test.game.core.utils.JarClassLoader;
-import com.test.game.data.guice.DataGuiceModule;
 
 import java.io.IOException;
 
@@ -15,10 +12,6 @@ public abstract class Main {
      * Stage.DEVELOPMENT(快速启动，不做检验)
      * Stage.TOOL(最小代价，有些功能无法使用)
      */
-    /*实例化器*/
-    public static final Injector injector =
-            Guice.createInjector(Stage.PRODUCTION, new DataGuiceModule());
-
     /*logic层Main方法的包名*/
     private static final String logicMain = "com.test.game.ScriptMain";
 

@@ -35,7 +35,7 @@ public class OriginMessage extends NameAndDesc {
         this.from = annotation.from();
         this.to = annotation.to();
 
-        this.pkg = clazz.getPackage().getName();
+        this.pkg = cfgPkg + clazz.getPackage().getName().substring(clazz.getPackage().getName().lastIndexOf("."));
         java.lang.Class<?> requestClass = ReflectUtils.staticInsideClass(clazz, "Req");
         Preconditions.checkNotNull(requestClass, "%s 没有 Req", clazz.getName());
         this.request = new ArrayList<>();

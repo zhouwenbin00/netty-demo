@@ -1,3 +1,6 @@
 0,com.test.game.message_module.account.AccountLogin$Req
 1,com.test.game.message_module.account.AccountLogin$Res
 2,com.test.game.message_module.account.AccountLogin$Fail
+3,com.test.game.message_module.login.VersionCheck$Req
+4,com.test.game.message_module.login.VersionCheck$Res
+5,com.test.game.message_module.login.VersionCheck$Fail

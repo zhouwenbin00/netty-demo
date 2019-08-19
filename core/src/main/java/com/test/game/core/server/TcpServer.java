@@ -6,6 +6,7 @@ import com.test.game.core.server.hander.ByteToMessageHandler;
 import com.test.game.core.server.hander.ExceptionHandler;
 import com.test.game.core.server.hander.MessageHandler;
 import com.test.game.core.server.hander.MessageToByteHandler;
+import com.test.game.core.utils.GameClock;
 import com.test.game.core.utils.Num;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -20,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 /** @Auther: zhouwenbin @Date: 2019/8/3 15:12 */
 public class TcpServer {
@@ -33,7 +35,7 @@ public class TcpServer {
     private final int LOW_WATER_MARK = 32 * Num.KB;
     private final int HIGH_WATER_MARK = 64 * Num.KB;
 
-    public TcpServer(String name, int port, ChannelInitializer<SocketChannel> initializer) {
+    public TcpServer(String name, int port, ChannelInitializer<SocketChannel> initializer, Runnable tick) {
         this.bootstrap = new ServerBootstrap();
         this.name = name;
         this.port = port;
@@ -63,6 +65,11 @@ public class TcpServer {
                 .childOption(
                         ChannelOption.WRITE_BUFFER_WATER_MARK,
                         new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK));
+        if (tick != null){
+            for (EventExecutor executor : this.getWorkerGroup()) {
+                executor.scheduleWithFixedDelay(tick, 0L, 10L,  TimeUnit.MILLISECONDS);
+            }
+        }
     }
 
     public TcpServer(
@@ -149,6 +156,7 @@ public class TcpServer {
                 .childOption(
                         ChannelOption.WRITE_BUFFER_WATER_MARK,
                         new WriteBufferWaterMark(LOW_WATER_MARK, HIGH_WATER_MARK));
+
         log.info("init TcpServer end...");
     }
 

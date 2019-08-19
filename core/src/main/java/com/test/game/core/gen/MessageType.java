@@ -1,9 +1,9 @@
 package com.test.game.core.gen;
 
 public enum MessageType {
-    Request(0),
-    Response(2),
-    Error(3);
+    Req(0),
+    Res(2),
+    Fail(3);
 
     private final int value;
 

@@ -18,13 +18,13 @@
 //import java.util.concurrent.atomic.AtomicInteger;
 //
 ///** @Auther: zhouwenbin @Date: 2019/8/5 20:07 */
-//public class Dispatcher extends MessageHandler {
+//public class IDispatcher extends MessageHandler {
 //
-//    private static final Logger log = LoggerFactory.getLogger(Dispatcher.class);
+//    private static final Logger log = LoggerFactory.getLogger(IDispatcher.class);
 //    private DataCenter dataCenter = DataCenter.getInstance();
 //    private final int MAX_IP_COUNT = 6;
 //
-//    public Dispatcher(String name, @Nullable Factory<Governor> governorFactory) {
+//    public IDispatcher(String name, @Nullable Factory<Governor> governorFactory) {
 //        super(name, governorFactory);
 //    }
 //

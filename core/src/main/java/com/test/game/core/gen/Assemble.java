@@ -39,15 +39,15 @@ public class Assemble {
                             prefix + "MessageGroup");
             this.hg =
                     new HandlerGroup(
-                            pkg + ".hg",
+                            pkg.replace("data","logic").replace("message","group"),
                             new ArrayList<>(),
                             new ArrayList<>(),
                             new ArrayList<>(),
                             prefix + "HandlerGroup",
-                            pkg + ".handler." + prefix + "Handler");
+                            pkg.replace("data","logic") + ".handler." + prefix + "Handler");
             this.jgm =
                     new JavaGuiceModule(
-                            pkg + ".guice",
+                            pkg.replace("data","logic").replace("message","guice"),
                             prefix + "GuiceModule",
                             new ArrayList<>(),
                             new ArrayList<>(),
@@ -59,7 +59,7 @@ public class Assemble {
             if (!ignoreHandler) {
                 Handler handler =
                         new Handler(
-                                message.getPackage(),
+                                message.getPackage().replace("data","logic")+".handler",
                                 new ArrayList<>(),
                                 new ArrayList<>(),
                                 message.getId(),
@@ -118,7 +118,7 @@ public class Assemble {
                                     om.request,
                                     om.from,
                                     om.to,
-                                    StringUtils.upperFirstAndLowerOther(MessageType.Request.name()),
+                                    StringUtils.upperFirstAndLowerOther(MessageType.Req.name()),
                                     om.requestID),
                             om.ignoreRequestHandler);
             if (om.response != null) {
@@ -130,7 +130,7 @@ public class Assemble {
                                         om.to,
                                         om.from,
                                         StringUtils.upperFirstAndLowerOther(
-                                                MessageType.Response.name()),
+                                                MessageType.Res.name()),
                                         om.responseID),
                                 om.ignoreResponseHandler);
             }
@@ -169,10 +169,8 @@ public class Assemble {
                         mergeMessages(tmpBeans.values()),
                         version,
                         mergeHandlers(tmpBeans.values()));
-        Iterator var19 = tmpBeans.values().iterator();
 
-        while (var19.hasNext()) {
-            Assemble.TmpBean tmpBean = (Assemble.TmpBean) var19.next();
+        for (TmpBean tmpBean : tmpBeans.values()) {
             javaResult.mgs.add(tmpBean.mg);
             javaResult.hgs.add(tmpBean.hg);
             javaResult.jgms.add(tmpBean.jgm);
@@ -247,7 +245,11 @@ public class Assemble {
         return new ErrorMessage(
                 om.pkg,
                 new NameAndDesc(
-                        om.name + StringUtils.upperFirstAndLowerOther(MessageType.Error.name()),
+                        StringUtils.upperFirstAndLowerOther(MessageType.Req.name())
+                                + om.name
+                                + StringUtils.upperFirstAndLowerOther(MessageType.Fail.name()
+                                + "Message"
+                        ),
                         om.desc),
                 null,
                 om.errorID,
@@ -305,14 +307,17 @@ public class Assemble {
             int id) {
         return new Message(
                 om.pkg,
-                new NameAndDesc(om.name + suffix, om.desc),
+                new NameAndDesc(suffix+ om.name + "Message", om.desc),
                 convert(fields),
                 id,
                 from,
                 to,
                 om.error == null
-                        ? null
-                        : om.name + StringUtils.upperFirstAndLowerOther(MessageType.Error.name()),
+                        ? null:
+                        StringUtils.upperFirstAndLowerOther(MessageType.Req.name())
+                                + om.name
+                                + StringUtils.upperFirstAndLowerOther(MessageType.Fail.name()
+                                + "Message"),
                 om.getClient_package(),
                 om.getClient_name(from, to),
                 om.getCfgPkg());

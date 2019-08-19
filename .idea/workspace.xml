@@ -2,31 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5d8563-7bdf-4f0f-a4dd-afe75cee24e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/StringUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/DataCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/DataCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Assemble.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Assemble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/TcpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/TcpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ByteBufUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ByteBufUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/NetUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/NetUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/META-INF/core.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/Assemble$TmpBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/Assemble$TmpBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/Assemble.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/Assemble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/MessageType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/gen/OriginMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/ByteBufUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/ByteBufUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/GenerateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/GenerateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/NetUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/test/game/core/utils/NetUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/account/AccountDataCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/account/AccountDataCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/role/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/user/ClientToServerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/ClientToServerUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/DataCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/com/test/game/data/DataCenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/com/test/game/data/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/account/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/account/AccountDataCenter$Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/account/AccountDataCenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/role/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/com/test/game/data/user/ClientToServerUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/SessionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/SessionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/ClientToServerUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/DataGuiceModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/GameGuiceModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ClientToServerMessageGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/MessageVersion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ServerToClientMessageGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/role/JavaType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/role/RoleBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicParentModule.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/handler/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/handler/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/target/classes/com/test/game/logic/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/target/classes/com/test/game/logic/SessionUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/target/classes/com/test/game/logic/handler/Dispatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/account/AccountLoginErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/account/AccountLoginRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/account/AccountLoginResponseHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/guice/ClientToServerGuiceModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/guice/ServerToClientGuiceModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ClientToServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ServerToClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/hg/ClientToServerHandlerGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/hg/ServerToClientHandlerGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/logs/ytsc.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/logs/ytsc.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/resources/msg-id.txt" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/resources/msg-id.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/target/classes/META-INF/template.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/target/classes/com/test/game/MsgSrcGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/template/target/classes/com/test/game/MsgSrcGen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/target/classes/msg-id.txt" beforeDir="false" afterPath="$PROJECT_DIR$/template/target/classes/msg-id.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,10 +77,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/IDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+            <state relative-caret-position="399">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,105 +89,89 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="19" column="65" lean-forward="true" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+            <state relative-caret-position="342">
+              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/DataGuiceModule.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-190">
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/WebSocketServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicLauncher.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/TcpServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="558">
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicModule.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/WebSocketServerInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#274#275#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicParentModule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#528#529#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/handler/Dispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="65" column="71" lean-forward="true" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/Launcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/GameProperties.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/MessageToBinaryWebSocketFrameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/DataCenter.java">
+        <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/ThreadLocal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="206">
+              <caret line="158" column="13" selection-start-line="158" selection-start-column="13" selection-end-line="158" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/guice/DataModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -190,6 +204,8 @@
       <find>cfgPkg</find>
       <find>ByteBufUtil</find>
       <find>import shell.nio.ByteBufUtils;</find>
+      <find>pkg</find>
+      <find>com.test.game.message_module.login.KickType</find>
     </findStrings>
     <replaceStrings>
       <replace>ch.pipeline()</replace>
@@ -198,6 +214,7 @@
       <replace>NodeType</replace>
       <replace>ByteBufUtils</replace>
       <replace>import com.test.game.core.utils.ByteBufUtils;</replace>
+      <replace>com.test.game.data.message.login.KickType</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -206,48 +223,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/template/src/main/resources/msg-id.txt" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/IDGenerator.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ReflectUtils.java" />
-        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/account/AccountLogin.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/HandlerGroup.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ServerToClientMessageGroup.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginRequest.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountBean.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_bean.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/head.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ByteBufUtils.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Assemble.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/handler/ClientToServerHandler.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginErrorHandler.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginResponseHandler.java" />
-        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java" />
-        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ClientToServerHandler.java" />
-        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ServerToClientHandler.java" />
-        <option value="$PROJECT_DIR$/logic/pom.xml" />
-        <option value="$PROJECT_DIR$/data/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_guice_module.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message_group.ftl" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ClientToServerMessageGroup.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_group.ftl" />
-        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/hg/ClientToServerHandlerGroup.java" />
-        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginError.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_error.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_enum.ftl" />
-        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/role/JavaType.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/CmdParams.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/DataGuiceModule.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/JarClassLoader.java" />
         <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/Main.java" />
-        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/SessionUtils.java" />
         <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/SessionUtils.java" />
-        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/ShutdownHooks.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/GameGuiceModule.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/GameProperties.java" />
@@ -256,7 +237,43 @@
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/Launcher.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/DataGuiceModule.java" />
         <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicModule.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/net/DispatcherScript.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/net/IDispatcherScript.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/net/IDispatcher.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/NetUtils.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/CommonChannel.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/ClientToServerUser.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/UserManager.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ServerScriptHolder.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ServerLogicHolder.java" />
         <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicLauncher.java" />
+        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/login/VersionCheck.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageType.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/ByteBufUtils.java" />
+        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginBean.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginEnum.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Assemble.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/handler/ServerToClientHandler.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/handler/ClientToServerHandler.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/login/handler/ReqVersionCheckFailmessageHandler.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/User.java" />
+        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/login/KickType.java" />
+        <option value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/login/Kick.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ClientToServerUser.java" />
+        <option value="$PROJECT_DIR$/generated/src/main/java/com/test/game/data/message/login/ReqKickMessage.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/net/ClientToServerDispatcher.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/IDispatcher.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ClientToServerDispatcher.java" />
+        <option value="$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/guice/DataModule.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/MessageToBinaryWebSocketFrameHandler.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/TcpServer.java" />
       </list>
     </option>
   </component>
@@ -287,10 +304,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -302,86 +319,124 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="freemarker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="freemarker" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -389,77 +444,227 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="generated" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="generated" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="generated" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="generated" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="generated" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="netty-demo-xxx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-demo-xxx" type="462c0819:PsiDirectoryNode" />
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="guice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="message_module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="message_module" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565958732566" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566182451736" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/template/src/main/java/com/test/game/message_module" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -471,6 +676,13 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.test.game.data" />
+      <recent name="com.test.game.module.account" />
+      <recent name="com.test.game.core.utils" />
+      <recent name="com.test.game.core.message" />
+      <recent name="com.test.game.core.server" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.test.game.core.utils" />
     </key>
@@ -481,25 +693,19 @@
       <recent name="com.test.game.core.utils" />
       <recent name="com.test.game.core.server" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\other\netty-demo-xxx\core\src\main\resources\freemarker\config\client" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\other\netty-demo\logic\src\main\java\com\test\game\logic\message\handler" />
       <recent name="E:\IdeaProjects\other\netty-demo-xxx\logic\src\main\java\com\test\game\message_module" />
       <recent name="E:\IdeaProjects\other\netty-demo-xxx\generated\src\main\java\com\test\game\message_module" />
       <recent name="handler" />
       <recent name="E:\IdeaProjects\other\netty-demo-xxx\core\src\main\resources\freemarker" />
-      <recent name="E:\IdeaProjects\other\netty-demo-xxx\template\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.test.game.data.net" />
       <recent name="com.test.game.core.net" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.test.game.data" />
-      <recent name="com.test.game.module.account" />
-      <recent name="com.test.game.core.utils" />
-      <recent name="com.test.game.core.message" />
-      <recent name="com.test.game.core.server" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\other\netty-demo-xxx\core\src\main\resources\freemarker\config\client" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -514,7 +720,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LogicMain">
+  <component name="RunManager" selected="Application.MsgSrcGen">
     <configuration name="CfgSrcGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.game.CfgSrcGen" />
       <module name="template" />
@@ -582,10 +788,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MsgSrcGen" />
         <item itemvalue="Application.LogicMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StringUtils" />
-        <item itemvalue="Application.MsgSrcGen" />
         <item itemvalue="Application.CfgSrcGen" />
       </list>
     </recent_temporary>
@@ -611,11 +817,12 @@
       <workItem from="1565419101074" duration="12547000" />
       <workItem from="1565666087460" duration="14524000" />
       <workItem from="1565943668329" duration="9248000" />
+      <workItem from="1566130665333" duration="10140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99526000" />
+    <option name="totallyTimeSpent" value="109666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,7 +834,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -635,7 +842,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50165015" side_tool="true" weight="0.26332623" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49834985" visible="true" weight="0.27985075" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49834985" visible="true" weight="0.28304905" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.34127843" />
@@ -643,13 +850,13 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.38244852" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32917964" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.38213915" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32719395" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3271028" />
       <window_info anchor="right" id="leetcode" order="0" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
@@ -697,18 +904,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java</url>
-          <line>253</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -723,414 +918,420 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ClientToServerHandler.java">
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/login/ResVersionCheckMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="406">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/pom.xml">
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/login/ReqVersionCheckFail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="-221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/hg/ServerToClientHandlerGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/account/AccountLoginResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/handler/ServerToClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/MessageVersion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ServerToClientMessageGroup.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/head.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginResponse.java">
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/login/ReqVersionCheckFailmessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_error.ftl">
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/login/ReqVersionCheckMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="1577">
+          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message_version.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler.ftl">
+    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="206">
+          <caret line="794" column="19" selection-start-line="794" selection-start-column="19" selection-end-line="794" selection-end-column="19" />
+          <folding>
+            <element signature="e#32636#32637#0" expanded="true" />
+            <element signature="e#32683#32684#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_group.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message_group.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/role/RoleBean.java">
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/data/message/AccountBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/ClientToServerMessageGroup.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="37" column="114" selection-start-line="37" selection-start-column="114" selection-end-line="37" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/ResAccountLoginMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="18" column="32" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_enum.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/role/JavaType.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/OriginBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Bean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/role/JavaType.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/JavaGuiceModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/account/AccountLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_bean.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/message_module/hg/ClientToServerHandlerGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="112">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_guice_module.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/message_module/account/AccountLoginError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="120" column="40" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/util/Formatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11854">
-          <caret line="2492" column="21" selection-start-line="2492" selection-start-column="21" selection-end-line="2492" selection-end-column="21" />
-          <folding>
-            <element signature="e#101735#101736#0" expanded="true" />
-            <element signature="e#101781#101782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="2980" column="35" lean-forward="true" selection-start-line="2980" selection-start-column="35" selection-end-line="2980" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
-          <folding>
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="1584" column="22" selection-start-line="1584" selection-start-column="22" selection-end-line="1584" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/JarClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-547">
-          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/account/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/SessionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/ShutdownHooks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/GameGuiceModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/CmdParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/DataCenter.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/GameProperties.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/MessageGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="179">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicParentModule.java">
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/data/message/hg/ClientToServerHandlerGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/data/message/hg/ServerToClientHandlerGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/MsgSrcGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/guice/ClientToServerGuiceModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/guice/ServerToClientGuiceModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1599#1600#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message_group.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/auto_message_version.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_guice_module.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/resources/freemarker/message/server/custom_handler_group.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/utils/GenerateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="307" column="18" lean-forward="true" selection-start-line="307" selection-start-column="18" selection-end-line="307" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/HandlerGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/gen/Assemble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/handler/ServerToClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/handler/ClientToServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/message/login/handler/ReqVersionCheckFailmessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="90" lean-forward="true" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/group/ServerToClientHandlerGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/game/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/login/KickType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/src/main/java/com/test/game/message_module/login/Kick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ClientToServerUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="35" column="36" lean-forward="true" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding>
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generated/src/main/java/com/test/game/data/message/login/ReqKickMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/handler/Dispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="65" column="71" lean-forward="true" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
+        <state relative-caret-position="-456">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/Launcher.java">
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/group/ClientToServerHandlerGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicMain.java">
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/net/ClientToServerDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+        <state relative-caret-position="323">
+          <caret line="82" column="19" lean-forward="true" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/IDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/Main.java">
+    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/guice/DataModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="19" column="65" lean-forward="true" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        <state relative-caret-position="304">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/ClientToServerDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/guice/DataGuiceModule.java">
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/test/game/data/net/Dispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/software/Java/jdk1.8.0_202/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="158" column="13" selection-start-line="158" selection-start-column="13" selection-end-line="158" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/MessageToBinaryWebSocketFrameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicModule.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/hander/WebSocketServerInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="206">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/src/main/java/com/test/game/logic/LogicLauncher.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/WebSocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/test/game/core/server/TcpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
         </state>
       </provider>
     </entry>

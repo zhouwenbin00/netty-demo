@@ -2,6 +2,8 @@ package com.test.game.core.utils;
 
 import com.test.game.core.net.message.MessageFactory;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 import org.slf4j.Logger;
@@ -44,5 +46,36 @@ public abstract class NetUtils {
     public static void close(Channel channel, String because) {
         log.info("close {} , because {}", channel, because);
         channel.close();
+    }
+
+    public static void write(Channel channel, Object msg){
+        write(channel, msg, null);
+    }
+
+    /**
+     * 写对象到管道
+     * @param channel
+     * @param msg
+     * @param listener
+     */
+    public static void write(Channel channel, Object msg, ChannelFutureListener listener){
+        ChannelFuture future = channel.write(msg);
+        if (listener != null){
+            future.addListener(listener);
+        }
+    }
+
+    /**
+     * 写入并关闭
+     * @param channel
+     * @param msg
+     * @param because
+     */
+    public static void closeAndWrite(Channel channel, byte[] msg, String because) {
+        if (msg != null) {
+            write(channel, msg, (future) -> close(channel, because));
+        } else {
+            close(channel, because);
+        }
     }
 }

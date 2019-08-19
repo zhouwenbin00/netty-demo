@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -91,6 +92,32 @@ public abstract class MessageHandler extends ChannelInboundHandlerAdapter {
         onChannelRead(ctx.channel(), (Message) msg);
     }
 
+    public void tick(long now) {
+
+        for (Channel channel : this.getNoNullChannels()) {
+            try {
+                if (channel.attr(NetUtils.WRITE_FAIL_TIMES) != null) {
+                    channel.flush();
+                    this.tick(channel, now);
+                }
+            } catch (Throwable var6) {
+                log.error("tick", var6);
+            }
+        }
+
+    }
+
+    private Set<Channel> getNoNullChannels() {
+        Set<Channel> channels = this.localChannels().get();
+        if (channels != null) {
+            return channels;
+        } else {
+            channels = new HashSet<>();
+            this.localChannels().set(channels);
+            return channels;
+        }
+    }
+
     @Override
     public final void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         log.error("[{}][{}]", name, NetUtils.host(ctx), cause);
@@ -104,5 +131,7 @@ public abstract class MessageHandler extends ChannelInboundHandlerAdapter {
 
     protected abstract void onChannelInactive(Channel channel);
 
-    //    public void tick(long time) {}
+    protected abstract ThreadLocal<Set<Channel>> localChannels();
+
+    public void tick(Channel channel, long time) {}
 }

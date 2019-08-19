@@ -13,7 +13,7 @@ public class OriginEnum extends NameAndDesc {
     public final List<NameAndDesc> fields;
     public final int start;
 
-    public OriginEnum(java.lang.Class<?> clazz) {
+    public OriginEnum(java.lang.Class<?> clazz,String cfgPkg) {
         super(
                 clazz.getSimpleName(),
                 clazz.getAnnotation(BeanClass.class) == null
@@ -22,7 +22,7 @@ public class OriginEnum extends NameAndDesc {
         BeanClass annotation = clazz.getAnnotation(BeanClass.class);
         this.start = annotation == null ? 1 : annotation.start();
         this.fields = new ArrayList<>();
-        this.pkg = clazz.getPackage().getName();
+        this.pkg = cfgPkg + clazz.getPackage().getName().substring(clazz.getPackage().getName().lastIndexOf("."));
         for (Field field : clazz.getDeclaredFields()) {
             if (!ReflectUtils.isPrivate(field)) {
                 this.fields.add(
